@@ -29,8 +29,8 @@ postgres:
     - data
   # volumes:
   #   - /appdata:/var/lib/postgresql/data
-  ports:
-    - "5432:5432"
+  expose:
+    - "5432"
   environment:
     - POSTGRES_PASSWORD=test
     - POSTGRES_USER=bhx
@@ -38,7 +38,7 @@ postgres:
 # redis:
 #   restart: always
 #   image: redis:latest
-#   ports:
+#   expose:
 #     - "6379:6379"
 
 data:
